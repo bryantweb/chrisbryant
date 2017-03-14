@@ -1,0 +1,19 @@
+/* # Variables
+---------------------------------------------------------------------------------------------------- */
+
+/* GRID SETUP */
+
+// default grid
+
+$neat-grid: (
+  columns: 2,
+  gutter: 20px,
+);
+
+//$example: ( columns: 12, gutter: 30px, media: (1 * 16px),);
+//$zero: (columns: 12, gutter: 30px, media: (1 * 16px),);
+$phone: (columns: 4, gutter: 20px, media: (568px),); 			// 560px
+$portrait: (columns: 12, gutter: 20px, media: (48 * 16px),);		// 768px 860??
+$landscape: (columns: 12, gutter: 20px, media: (64 * 16px),);		// 1024px
+$desktop: (columns: 12, gutter: 20px, media: (74 * 16px),);		// 1184px	
+$xldesktop: (columns: 12, gutter: 20px, media: (105 * 16px),);		// 1680px

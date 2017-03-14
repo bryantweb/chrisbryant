@@ -1,0 +1,121 @@
+// Use with @extend to make reponsive modules
+
+
+// %wrap {
+// 	margin: 0 auto;
+// 	padding-right: 5%;
+// 	padding-left: 5%;
+// 	max-width: $site-width + 1em;
+// 	width: 100%;
+// }
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+%image-replacement {
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+}
+
+.no-js {
+	.hide-no-js {
+		display: none !important;
+	}
+}
+
+%unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+%type {
+	//margin-bottom: $spacer;
+	letter-spacing: .01rem;
+	line-height: 1.5;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+%visuallyhidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	background: #fff;
+	color: #000;
+
+	&:focus {
+		z-index: 100000;
+		display: block;
+		clip: auto;
+		width: auto;
+		height: auto;
+	}
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+//https://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+// Set the opacity for all browsers and provide a filter fallback for IE8.
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+	// Usage
+	// .article-heading {
+	//  	@include opacity(0.8);
+	// }
+
+// $img-folder: ../images/hero-bgs/, $img-phone: -400x184, $img-small: -640x283, $img-med:	-768x340, $img-large: -1600x500, $img-ext: .jpg,
+
+@mixin responsive-bg-image($img-name, $img-ext: ".jpg", $img-folder: "../images/hero-bgs/", $img-phone: "-400x184", $img-small: "-640x283", $img-med: "-768x340", $img-large: "-1600x500") {
+	background-size: cover;
+
+	background-image: url('#{$img-folder}#{$img-name}#{$img-phone}#{$img-ext}');
+
+     @include media(">=560px", "<768px") {
+       background-image: url('#{$img-folder}#{$img-name}#{$img-small}#{$img-ext}');
+     }
+     
+     @include media(">=768px", "<1024px") {
+       background-image: url('#{$img-folder}#{$img-name}#{$img-med}#{$img-ext}');
+     }
+     
+     @include media(">=1024px") {
+       background-image: url('#{$img-folder}#{$img-name}#{$img-large}#{$img-ext}');
+     }
+}
+
+
+@mixin media-query-bg-image($img-path, $img-ext: ".jpg", $img-phone: "-400x184", $img-small: "-640x283", $img-med: "-768x340", $img-large: "-1600x500") {
+	background-size: cover;
+
+	background-image: url('#{$img-path}#{$img-phone}#{$img-ext}');
+
+     @include media(">=560px", "<768px") {
+       background-image: url('#{$img-path}#{$img-small}#{$img-ext}');
+     }
+     
+     @include media(">=768px", "<1024px") {
+       background-image: url('#{$img-path}#{$img-med}#{$img-ext}');
+     }
+     
+     @include media(">=1024px") {
+       background-image: url('#{$img-path}#{$img-large}#{$img-ext}');
+     }
+}

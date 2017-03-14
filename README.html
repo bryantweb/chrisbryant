@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="chrisbryant-genesiscustomchildtheme">ChrisBryant - Genesis Custom Child Theme</h1>
+
+<p>Github project link: https://github.com/bryantweb/chrisbryant</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Mostly mobile-first (except for the responsive menu) Genesis Sample Child Theme 2.2.3. CSS styles have been split into SASS partials. Optimization functions have been added to improve speed.</p>
+
+<h2 id="installationinstructions">Installation Instructions</h2>
+
+<ol>
+<li>Click &#8216;Download ZIP&#8217; to download the complete project to your computer.</li>
+<li>Launch by double-clicking on the &#8216;index.html&#8217; file - or - by drag-and-dropping the index.html file onto an open web browser.</li>
+</ol>
+
+<h2 id="stylesheets">Stylesheets</h2>
+
+<ul>
+<li>Directory Changes</li>
+<li>added /src/sass sub-folder</li>
+<li>added /src/scss/genesis sub-folder</li>
+<li>Default CSS styles divided into SASS Partials (see /src/scss/genesis folder)</li>
+<li>added /src/scss/style.scss (compiles to root style.css via CodeKit3)</li>
+<li>Neat 2.0 added via CodeKit3</li>
+</ul>
+
+<h2 id="javascript">Javascript</h2>
+
+<ul>
+<li>No changes to default child theme JS</li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+
+<p>Code and File changes related to php functions.</p>
+
+<h3 id="directorychanges">Directory Changes</h3>
+
+<ul>
+<li>custom-admin.php added to /lib folder (file with changes that affect the back end only)</li>
+<li>optimize.php added to /lib folder (file with changes that affect the front end only)</li>
+</ul>
+
+<h4 id="functions.php">functions.PHP</h4>
+
+<ul>
+<li>Enqueued Google Roboto font 300, 400, 500, 700</li>
+<li>Disabled Genesis WooCommerce default support</li>
+</ul>
+
+<h4 id="optimize.php">optimize.PHP</h4>
+
+<ul>
+<li>Disable Emojis JS, CSS, and Feeds (default: active)</li>
+<li>Disable Comment Reply JS (default: active)</li>
+<li>FIX POOR Query Strings Reported by GT Metrix (default: active)</li>
+<li>Clean up WordPress Head (default: active)</li>
+<li>Remove WP Version Numbers (default: active)</li>
+<li>Remove Auto-Generated Markup (default: active)</li>
+<li>Add Browser to Body Class (default: active)</li>
+</ul>
+
+<h4 id="customize-admin.php">customize-admin.PHP</h4>
+
+<ul>
+<li>Add ACF Options Menu and Page (default: active)</li>
+<li>Disable ACF on Frontend (default: inactive)</li>
+<li>Control Who Sees What (default: active)</li>
+<li>Remove Genesis menu link (default: inactive)</li>
+<li>Remove WP LOGO from Top Bar in the backend (default: active)</li>
+<li>Customize Footer Text in the Admin Area (default: active)</li>
+<li>Remove WP Admin Bar (default: active)</li>
+<li>Unregister default Genesis layouts. (default: inactive)</li>
+<li>Unregister default Genesis sidebars. (default: inactive)</li>
+<li>Unregister default Genesis widgets. (default: active)</li>
+<li>Remove Dashboard Meta</li>
+<li>Unregister Widgets</li>
+<li>Akismet (default: active)</li>
+<li>Welcome Panel (default: active)</li>
+<li>Yoast Dashboard Widget (default: inactive)</li>
+<li>Unregister Default WP Widgets</li>
+</ul>
+
+<h2 id="stickyfooter">Sticky Footer</h2>
+
+<ul>
+<li>added .vh-wrap to /src/scss/genesis/_structure-layout.scss</li>
+<li>added stickyfoot_wrap_begin and stickyfoot_wrap_end functions to functions.php</li>
+</ul>
+
+<h2 id="neatgrid2.0usage">Neat Grid 2.0 Usage</h2>
+
+<ul>
+<li>Neat 2.0 added and used on .wrap divs (include content-sidebar-wrap)</li>
+<li>See the variables.scss partial for Grid settings</li>
+<li>In this version I haven&#8217;t quite committed to breakpoints / grid setup. So if things seem a little buggy - don&#8217;t be surprised.</li>
+</ul>
+
+<h6 id="syntaxnotes">Syntax Notes</h6>
+
+<ul>
+<li>[x] this is a complete item</li>
+<li>[ ] this is an incomplete item</li>
+</ul>
+
+</body>
+</html>

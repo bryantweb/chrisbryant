@@ -1,0 +1,38 @@
+/*!
+	Theme Name: Chris Bryant
+	Theme URI: https://chrisbryant.com/
+	Description: This is a custom Genesis Child theme for Inspired Window Fashions
+	Author: Chris Bryant
+	Author URI: https://chrisbryant.com
+	Version: 0.0.1
+	Template: genesis
+	Template Version: 2.4.2
+	License: GPL-2.0+
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: Inspired Window Fashions
+*/
+
+//@import "bourbon"; 			// includes all of this: http://bourbon.io/docs/
+//@import 'base/index'; 		// base styles via Bitters - imports Grid Settings
+
+@import "neat"; 			// semantic grid: http://neat.bourbon.io/
+@import "variables"; 
+@import "toolkit"; 			// helpful mixins and extends
+
+// Default Genesis Theme Styles
+
+@import 'genesis/reset';			// HTML5 Reset, Baseline Normalize, Box Sizing, Float Clearing
+@import 'genesis/defaults';			// Typographical Elements, Headings, Objects, Gallery, Forms, Tables, Screen Reader Text
+@import 'genesis/structure-layout';	// Site Containers, Column Widths and Positions, Column Classes
+@import 'genesis/common';			// Avatar, Genesis, Search Form, Titles, WordPress
+@import 'genesis/widgets';			// Widget Defaults, Featured Content
+@import 'genesis/plugins';			// Genesis eNews Extended, Jetpack
+@import 'genesis/skip-links';		// Skip Links for Accessibility
+@import 'genesis/site-header';		// Title Area, Widget Area
+@import 'genesis/site-navigation';	// Main Nav, Accesible Menu, Header Widget Menu, After Header Menu, Footer Menu
+@import 'genesis/content-area';		// Entries, Entry Meta, Pagination, Comments
+@import 'genesis/sidebars';	
+@import 'genesis/footer-widgets';	
+@import 'genesis/site-footer';	
+//@import 'genesis/media-queries';	// Max-width: 1340px, Max-width: 1200px, Max-width: 1023px, Max-width: 860px
+@import 'genesis/print-styles';

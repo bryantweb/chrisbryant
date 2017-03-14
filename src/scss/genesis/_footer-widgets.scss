@@ -1,0 +1,42 @@
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+// container holding widgets
+.footer-widgets {
+	background-color: #fff;
+	clear: both;
+	font-size: 18px;
+	font-size: 1.8rem;
+	padding: 60px 0;
+}
+
+// individual footer widgets
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	background: #ccc;
+	padding: 20px 40px;
+	@include grid-column(2);
+		@include grid-media($phone){
+			@include grid-column(4);
+		}
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+	margin-bottom: 20px;
+}
+
+.footer-widgets-2,
+.footer-widgets-3 {
+		@include grid-media($phone){
+			@include grid-column(2);
+			margin-bottom: 0px;
+		}
+}
+
+.footer-widgets-1 {
+	@include grid-media($phone){
+	margin-bottom: 20px;
+	}
+}

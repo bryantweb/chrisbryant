@@ -1,0 +1,107 @@
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	background-color: #fff;
+	padding: 0px 30px;
+	border-bottom: 1px solid #ddd;
+	box-shadow: rgba(0,0,0,0.2) 0 2px 6px 0;
+	position: relative;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+	transition: all 0.2s ease-in-out;
+		@include grid-media($landscape) {
+				position: fixed;
+				padding: 5px 30px;
+		}
+
+}
+
+.site-header > .wrap {
+	padding: 0 0;
+}
+
+
+.site-header.shrink {
+	background: #eee;
+	border-color: #ddd;
+	padding: 0px 30px;
+	box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
+}
+
+/* ## Title Area
+--------------------------------------------- */
+
+.title-area {
+	//background: blue;
+	float: left;
+	//margin-top: 10px;
+    //margin-left: 20px;
+    width: 200px;
+    vertical-align: center;
+}
+
+.header-image .title-area {
+	margin: 0 auto;
+	max-width: 300px;
+	padding: 0;
+}
+
+.header-full-width .title-area {
+	float: none;
+	width: 100%;
+}
+
+.site-title {
+	font-size: 26px;
+	font-size: 2.6rem;
+	font-weight: 700;
+	//line-height: 1.2;
+	line-height: 56px; //matches site-header > wrap height
+}
+
+
+.site-title a,
+.site-title a:focus,
+.site-title a:hover {
+	color: #333;
+	text-decoration: none;
+	
+}
+
+.header-image .site-title > a {
+	background-position: center !important;
+	background-size: contain !important;
+	float: left;
+	min-height: 80px;
+	width: 100%;
+}
+
+.site-description {
+	// font-size: 16px;
+	// font-size: 1.6rem;
+	// font-weight: 400;
+	// line-height: 1.5;
+	@extend %visuallyhidden;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}
+
+.header-image .site-description,
+.header-image .site-title {
+	display: block;
+	text-indent: -9999px;
+}
+
+/* ## Widget Area
+--------------------------------------------- */
+
+.site-header .widget-area {
+	float: right;
+	text-align: right;
+	width: 800px;
+}
